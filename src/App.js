@@ -35,9 +35,9 @@ function App() {
         <AddServices/>
         </Route> */}
 
-        <Route path="/services/:serviceId">
+        <PrivateRoute path="/services/:serviceId">
      <Details/>
-        </Route>
+        </PrivateRoute>
 
         <Route path="/explore">
        <Services/>

@@ -3,7 +3,7 @@ import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 
 import "./Dashboard.css";
-
+import PrivateRoute from '../Login/PrivateRoute/PrivateRoute';
 
 import useAuth from "../../Hooks/useAuth";
 
@@ -13,6 +13,7 @@ import MyBookings from "../Mybooking/Mybookings";
 import Pay from "../Pay/Pay";
 import Home from "../Home/Home/Home";
 import Review from "../Review/Review";
+import MangeOrder from "../MangeOrder/MangeOrder";
 
 const Dashbaord = () => {
   let { path, url } = useRouteMatch();
@@ -71,10 +72,10 @@ const Dashbaord = () => {
                   <li className="dashboard-menu">Make Admin</li>
                 </Link>)}
 
-
-                {/* <Link to={`${url}/manageServices`}>
+                {isAdmi &&(
+                <Link to={`${url}/manageServices`}>
                   <li className="dashboard-menu">Manage Service</li>
-                </Link> */}
+                </Link>)}
 
 {user?.email ?
                         <Button onClick={logOut} variant="light">Logout</Button> :
@@ -84,9 +85,9 @@ const Dashbaord = () => {
           </div>
           <div className="col-md-9">
             <Switch>
-              <Route exact path={path}>
+              <PrivateRoute exact path={path}>
                 <MyBookings></MyBookings>
-              </Route>
+              </PrivateRoute>
               <Route exact path={`${path}/review`}>
                 <Review></Review>
               </Route>
@@ -103,9 +104,10 @@ const Dashbaord = () => {
               <Route exact path={`${path}/pay`}>
                 <Pay></Pay>
               </Route>
-              {/* <Route exact path={`${path}/manageServices`}>
-                <ManageServices></ManageServices>
-              </Route> */}
+              {isAdmi &&(
+              <Route exact path={`${path}/manageServices`}>
+               <MangeOrder/>
+              </Route>) }
             </Switch>
           </div>
         </div>
