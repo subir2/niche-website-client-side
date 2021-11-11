@@ -10,6 +10,9 @@ import useAuth from "../../Hooks/useAuth";
 import AddServices from "./../AddServices/AddServices";
 import MakeAdmin from "../Makeadmin/MakeAdmin";
 import MyBookings from "../Mybooking/Mybookings";
+import Pay from "../Pay/Pay";
+import Home from "../Home/Home/Home";
+import Review from "../Review/Review";
 
 const Dashbaord = () => {
   let { path, url } = useRouteMatch();
@@ -36,17 +39,25 @@ const Dashbaord = () => {
             <div className="dashboard">
               <h5>Dashboard</h5>
 
+         
+
               {!isAdmi && (<Link to={`${url}`} style={{ textDecoration: 'none' }}>
-                <li className="dashboard-menu mt-5">My Booking</li>
+                <li className="dashboard-menu mt-5">My Orders</li>
+              </Link>)}
+
+              {!isAdmi && (<Link to={`${url}/pay`} style={{ textDecoration: 'none' }}>
+                <li className="dashboard-menu mt-5">Payment</li>
               </Link>)}
 {/* 
               <Link to={`${url}/BookingList`}>
                 <li className="dashboard-menu mt-5">Booking list</li>
               </Link> */}
 
-              {/* <Link to={`${url}/review`}>
+{!isAdmi && ( <Link to={`${url}/review`}>
                 <li className="dashboard-menu mt-5">Review</li>
-              </Link> */}
+              </Link>)}
+
+
               <div className="admin-dashboard">
                 <li className="dashboard-menu mt-5">Orders list</li>
 
@@ -76,17 +87,21 @@ const Dashbaord = () => {
               <Route exact path={path}>
                 <MyBookings></MyBookings>
               </Route>
-              {/* <Route exact path={`${path}/review`}>
+              <Route exact path={`${path}/review`}>
                 <Review></Review>
-              </Route> */}
+              </Route>
               {/* <Route exact path={`${path}/BookingList`}>
                 <MyBookings></MyBookings>
               </Route> */}
+         
               <Route exact path={`${path}/Makeadmin`}>
                 <MakeAdmin></MakeAdmin>
               </Route>
               <Route exact path={`${path}/Addservices`}>
                 <AddServices></AddServices>
+              </Route>
+              <Route exact path={`${path}/pay`}>
+                <Pay></Pay>
               </Route>
               {/* <Route exact path={`${path}/manageServices`}>
                 <ManageServices></ManageServices>
