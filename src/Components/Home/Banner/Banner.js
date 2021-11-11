@@ -14,6 +14,7 @@ import Slide from "react-reveal/Slide";
 const Banner = () => {
     return (
       <div>
+          
       <div
         style={{
           background: `url('https://wallpapers.com/images/high/night-sky-stars-wallpaper-wallpaper-hd-wallpaper-y5pmbuy7mfv93mae.jpg')`,

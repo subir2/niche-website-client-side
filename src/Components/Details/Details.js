@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Hooks/useAuth";
+import Navigation from "../Home/Navigation/Navigation";
 
 const Details = () => {
   const [service, setService] = useState({});
@@ -38,6 +39,7 @@ const Details = () => {
 
   return (
     <div>
+        <Navigation/>
     <div className="details-container">
         <h1>Purchase && order Page </h1>
       <div className="row container">

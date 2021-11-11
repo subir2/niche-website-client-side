@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import Navigation from "../Home/Navigation/Navigation";
 
 const Services = () => {
   const [services, setServices] = useState([]);
@@ -12,6 +13,7 @@ const Services = () => {
   // console.log(services);
   return (
     <div>
+        <Navigation/>
       <h1>Services</h1>
       <div className="services">
         <div className="row container">

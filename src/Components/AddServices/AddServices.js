@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import useAuth from "../../Hooks/useAuth";
 import { Spinner } from "react-bootstrap";
 import swal from 'sweetalert';
+import Navigation from "../Home/Navigation/Navigation";
 
 const AddServices = () => {
   const { user} = useAuth();
@@ -41,6 +42,7 @@ const AddServices = () => {
   };
   return (
     <div>
+       
       <div>
         <h1 className="mt-5 text-center text-danger">Please Add Services</h1>
         <div className=" w-25 m-auto mt-5">

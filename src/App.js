@@ -13,6 +13,7 @@ import AddServices from './Components/AddServices/AddServices';
 import Services from './Components/Services/Services';
 import Details from './Components/Details/Details';
 import MakeAdmin from './Components/Makeadmin/MakeAdmin';
+import Dashbaord from './Components/Dashboard/Dashbaord';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
     <div className="App">
       <AuthProvider>
  <Router>
-    <Navigation/>
+  
         <Switch>
 
             <Route exact path="/">
@@ -30,26 +31,30 @@ function App() {
         <Home></Home>
         </Route>
 
-        <Route path="/Addservices">
+        {/* <Route path="/Addservices">
         <AddServices/>
-        </Route>
+        </Route> */}
 
         <Route path="/services/:serviceId">
      <Details/>
         </Route>
 
-        <PrivateRoute path="/explore">
+        <Route path="/explore">
        <Services/>
-        </PrivateRoute>
+        </Route>
 
 
         <Route path="/Login">
         <Login/>
         </Route>
 
-        <Route path="/Makeadmin">
+        <PrivateRoute path="/Dashboard">
+        <Dashbaord/>
+        </PrivateRoute>
+
+        {/* <Route path="/Makeadmin">
         <MakeAdmin/>
-        </Route>
+        </Route> */}
 
         <Route path="/signup">
         <Signup/>

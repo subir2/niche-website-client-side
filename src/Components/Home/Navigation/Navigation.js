@@ -20,8 +20,9 @@ const Navigation = () => {
                 <Navbar.Collapse className="justify-content-end">
                     <Nav.Link as={HashLink} to="/home">Home</Nav.Link>
                     <Nav.Link as={HashLink} to="/explore">Explore</Nav.Link>
-                    <Nav.Link as={HashLink} to="/Addservices">Add Services</Nav.Link>
-                    <Nav.Link as={HashLink} to="/Makeadmin">Make Admin</Nav.Link>
+                   
+                    <Nav.Link as={HashLink} to="/Dashboard">Dashboard</Nav.Link>
+                   
                     
                     {user?.email ?
                         <Button onClick={logOut} variant="light">Logout</Button> :

@@ -6,6 +6,8 @@ import { faEnvelope, faLock,faUser } from "@fortawesome/free-solid-svg-icons";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import useAuth from '../../Hooks/useAuth';
 import swal from 'sweetalert';
+import Navigation from '../Home/Navigation/Navigation';
+import Footer from '../Footer/Footer';
 
 const Signup = () => {
     const [loginData, setLoginData] = useState({});
@@ -33,6 +35,8 @@ const Signup = () => {
         e.preventDefault();
     }
     return (
+      <>
+        <Navigation/>
         <div className="text-center my-4">
         <h2>Please Sign Up</h2>
         <p className=" mt-2">Sign Up with Email & Password</p>
@@ -135,7 +139,9 @@ const Signup = () => {
             Already have an account? Please login!
           </NavLink>
         </p>
+        <Footer/>
       </div>
+      </>
     );
 };
 

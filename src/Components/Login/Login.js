@@ -6,6 +6,8 @@ import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 
 import useAuth from '../../Hooks/useAuth';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
+import Navigation from '../Home/Navigation/Navigation';
+import Footer from '../Footer/Footer';
 const Login = () => {
 
  
@@ -30,6 +32,7 @@ const Login = () => {
 
     return (
         <div className="text-center my-4">
+          <Navigation/>
         <h2>Please Login</h2>
         <p className=" mt-2">Login with Email & Password</p>
         <p className="text-danger text-center">{''}</p>
@@ -85,7 +88,7 @@ const Login = () => {
             Need an Account? Please Sign up!
           </NavLink>
         </p>
-      
+      <Footer/>
        
       </div>
     );
