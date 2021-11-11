@@ -1,0 +1,63 @@
+.icon {
+    margin: 5px;
+    padding: 5px;
+
+    /* border-radius: 5px; */
+    color: rgb(155, 155, 155);
+    font-size: 30px;
+  }
+
+  .footer-menu {
+    list-style: none;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .footer-menu:hover {
+    color:cadetblue;
+  }
+  .footer-input {
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: gray;
+  }
+  .footer-container {
+    background-color:#0b0b1d;
+    padding: 50px;
+    color: rgb(216, 209, 209);
+  }
+  .foter-phone-icon {
+    font-size: 30px;
+    color:aliceblue;
+  }
+
+
+  .icon-fb:hover{
+    background-color:#3b5998;
+    width: 60px;
+      height: 60px;
+      border-radius: 10px;
+  }
+
+  .icon-insta:hover{
+    background-color:#bb1500;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+
+  }
+  .icon-you:hover{
+    background-color:#bb1500;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+
+  }
+  .icon-t:hover{
+    background-color:#1da1f2;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+  }     
+  
