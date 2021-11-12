@@ -27,8 +27,15 @@ const Details = () => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((result) => console.log(result));
-    console.log(data);
+      .then(result => 
+      {
+         if(result){
+           alert("Orderd Successfully Placed");
+         }
+        
+      }
+      );
+   
   };
 
   useEffect(() => {
@@ -49,9 +56,9 @@ const Details = () => {
                 <div className="service-img">
                   <img className="w-50" src={service?.image} alt="" />
                 </div>
-                <h1>{service.name}</h1>
+                <h4>{service.name}</h4>
                 <p>{service.description}</p>
-                <p>{service.price}</p>
+                <p>Rate:{service.price} <em>৳</em></p>
                
                   <button  onClick={()=>onSubmit(service) }className="btn btn-success">Order Now</button>
                 

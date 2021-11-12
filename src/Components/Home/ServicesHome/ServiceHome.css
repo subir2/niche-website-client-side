@@ -1,0 +1,31 @@
+h4{
+    color: cadetblue;
+}
+hr{
+    border: 5px solid teal;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.cart:hover{
+    
+    border: 3px solid gold;
+}
+
+
+.Provide{
+color: maroon !important;
+}
+
+.btn-course{
+    background-color: maroon;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    color: whitesmoke;
+    height: 40px;
+    width: 100px;
+}
+.body{
+    background-color:azure;
+}
+

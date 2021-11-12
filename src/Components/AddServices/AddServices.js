@@ -16,7 +16,7 @@ const AddServices = () => {
     register,
     handleSubmit,
     watch,
-    
+   
     formState: { errors },
   } = useForm();
 
@@ -31,7 +31,9 @@ const AddServices = () => {
       .then((res) => res.json())
       .then(result=>{
         if(result){
+          
          alert("Product Added SuucessFully");
+         reset();
         // console.log("Hi");
         }
         

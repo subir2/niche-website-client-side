@@ -23,7 +23,7 @@
     background-color: gray;
   }
   .footer-container {
-    background-color:#0b0b1d;
+    background-image: url('./../../images/bgsection.png');
     padding: 50px;
     color: rgb(216, 209, 209);
   }

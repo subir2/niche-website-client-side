@@ -14,6 +14,8 @@ import Pay from "../Pay/Pay";
 import Home from "../Home/Home/Home";
 import Review from "../Review/Review";
 import MangeOrder from "../MangeOrder/MangeOrder";
+import ManageAllproduct from "../ManageAllproduct/ManageAllproduct";
+import Footer from "../Footer/Footer";
 
 const Dashbaord = () => {
   let { path, url } = useRouteMatch();
@@ -49,10 +51,7 @@ const Dashbaord = () => {
               {!isAdmi && (<Link to={`${url}/pay`} style={{ textDecoration: 'none' }}>
                 <li className="dashboard-menu mt-5">Payment</li>
               </Link>)}
-{/* 
-              <Link to={`${url}/BookingList`}>
-                <li className="dashboard-menu mt-5">Booking list</li>
-              </Link> */}
+
 
 {!isAdmi && ( <Link to={`${url}/review`}>
                 <li className="dashboard-menu mt-5">Review</li>
@@ -67,6 +66,15 @@ const Dashbaord = () => {
                     <li className="dashboard-menu">Add Service</li>
                   </Link>
                 )}
+
+                 {isAdmi && (
+                 <Link to={`${url}/productList`}>
+              <li className="dashboard-menu mt-5">Manage All Product</li>
+            </Link>
+                )}
+
+
+
                  {isAdmi &&(
                 <Link to={`${url}/Makeadmin`} style={{ textDecoration: 'none' }}>
                   <li className="dashboard-menu">Make Admin</li>
@@ -91,9 +99,9 @@ const Dashbaord = () => {
               <Route exact path={`${path}/review`}>
                 <Review></Review>
               </Route>
-              {/* <Route exact path={`${path}/BookingList`}>
-                <MyBookings></MyBookings>
-              </Route> */}
+              <Route exact path={`${path}/productList`}>
+                <ManageAllproduct></ManageAllproduct>
+              </Route>
          
               <Route exact path={`${path}/Makeadmin`}>
                 <MakeAdmin></MakeAdmin>
@@ -112,6 +120,7 @@ const Dashbaord = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

@@ -72,6 +72,9 @@ const MangeOrder = () => {
 
   return (
     <div className="container">
+     <marquee width="100%" direction="left" height="100px">
+<h4>Only Pending Product Show here.Only Admin Can Approve and Delete It .</h4> 
+</marquee>
       <h1>All orders {orders.length}</h1>
 
       <div className="services">
@@ -82,12 +85,13 @@ const MangeOrder = () => {
                 <div className="service-img">
                   <img className="w-50" src={pd?.image} alt="" />
                 </div>
-                <h1>{pd.name}</h1>
+                <h4>{pd.name}</h4>
                 <p>{pd.description}</p>
-                <p>{pd.price}</p>
+                <p>Rate:{pd.price} <em>৳</em></p>
+                <p>Order by:{pd.email}</p>
                
                   <button onClick={() => handleOrderId1(orders,pd?._id)} className="btn btn-success">Approved</button>
-                  <button onClick={()=>handeldelete(pd._id)} className="btn bg-danger p-2">Delete</button>
+                  <button onClick={()=>handeldelete(pd._id)} className="btn bg-danger p-2 m-2">Delete</button>
                 
               </div>
             </div>

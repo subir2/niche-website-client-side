@@ -14,7 +14,7 @@ const Services = () => {
   return (
     <div>
         <Navigation/>
-      <h1>Services</h1>
+      <h1>Our Products</h1>
       <div className="services">
         <div className="row container">
           {services?.map((pd, index) => (
@@ -23,9 +23,9 @@ const Services = () => {
                 <div className="service-img">
                   <img className="w-50" src={pd?.image} alt="" />
                 </div>
-                <h1>{pd.name}</h1>
+                <h4>{pd.name}</h4>
                 <p>{pd.description}</p>
-                <p>{pd.price}</p>
+                <p>Rate : {pd.price} <em>৳</em></p>
                 <Link to={`/services/${pd._id}`}>
                   {" "}
                   <button className="btn btn-success">Order Now</button>

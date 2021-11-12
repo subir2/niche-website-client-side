@@ -9,6 +9,7 @@ import { Container, Button, Row } from "react-bootstrap";
 
 import Bounce from "react-reveal/Bounce";
 import Slide from "react-reveal/Slide";
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
@@ -17,7 +18,7 @@ const Banner = () => {
           
       <div
         style={{
-          background: `url('https://wallpapers.com/images/high/night-sky-stars-wallpaper-wallpaper-hd-wallpaper-y5pmbuy7mfv93mae.jpg')`,
+          background: `url('https://c4.wallpaperflare.com/wallpaper/928/479/800/baby-wallpaper-preview.jpg')`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",
           backgroundSize: "cover",
@@ -30,23 +31,21 @@ const Banner = () => {
           >
             <div className="text-center my-5 py-5">
               <Bounce left cascade>
-                <h1 className="text-white">Where the journey begins!</h1>
+                <h1 className="text-white">Your Baby Our Food!</h1>
               </Bounce>
 
               <Bounce right cascade>
                 <p className="my-4 text-white fs-5">
-                Let us transport you with our highly affordable and reliable holiday packages!
+                Make your child wardrobe brighter with us.
                 </p>
               </Bounce>
 
               <Bounce>
-                <Button
-                  onClick={''}
-                  className="rounded-pill fs-5 py-2 px-4"
-                  variant="primary"
-                >
-                  View Services
-                </Button>
+              <Link to={`/explore`}>
+                  {" "}
+                  <button className="btn btn-success w-50">View Services</button>
+                </Link>
+                  
               </Bounce>
             </div>
           </div>
