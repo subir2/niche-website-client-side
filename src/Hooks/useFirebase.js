@@ -36,7 +36,7 @@ const registerUser = (email,password,name,history) => {
 }
 
 const hanldeUserInfoRegister = (email,name) => {
-    fetch("http://localhost:5000/addUserInfo", {
+    fetch("https://intense-ravine-08808.herokuapp.com/addUserInfo", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ email ,name}),

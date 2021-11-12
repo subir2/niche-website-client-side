@@ -6,7 +6,7 @@ import Navigation from "../Home/Navigation/Navigation";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/allServices")
+    fetch("https://intense-ravine-08808.herokuapp.com/allServices")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -16,10 +16,10 @@ const Services = () => {
         <Navigation/>
       <h1>Our Products</h1>
       <div className="services">
-        <div className="row container">
+        <div className="row container ">
           {services?.map((pd, index) => (
-            <div className="col-md-6 col-lg-4">
-              <div className="service p-3 border border m-2">
+            <div className="col-md-6 col-lg-4 mb-2">
+              <div className="service p-3 border border  h-100">
                 <div className="service-img">
                   <img className="w-50" src={pd?.image} alt="" />
                 </div>

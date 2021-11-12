@@ -8,7 +8,7 @@ import Bounce from "react-reveal/Bounce";
 const ServicesHome = () => {
     const [servicesHome, setServicesHome] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:5000/allServices")
+      fetch("https://intense-ravine-08808.herokuapp.com/allServices")
         .then((res) => res.json())
         .then((data) => setServicesHome(data));
     }, []);
@@ -24,7 +24,7 @@ const ServicesHome = () => {
                   {
                    servicesHome?.slice(0,6).map((pd,index)=>(
                       <div className="col-md-4 mt-2">
-                          <div className="user  border border p-2  mt-5 mb-4 h-100">
+                          <div className="user  border border  mt-5 mb-4 h-100">
                           <img className="img-fluid" src={pd?.image} alt="" srcset="" />
                           <h4>{pd.name}</h4>
                           <p>Rate:{pd.price} <em>৳</em></p>

@@ -9,13 +9,17 @@ const MyBookings = () => {
   const[isdeleted,setIsdeleted]=useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrder/${user?.email}`)
+    fetch(`https://intense-ravine-08808.herokuapp.com/myOrder/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setBooking(data));
   }, [user?.email,isdeleted]);
   
+  console.log(booking);
+
+
   const handeldelete=(data)=>{
     alert("Do You Want To delete?")
+    console.log(data);
     fetch(`http://localhost:5000/deleteorder/${data}`,{
         method:"DELETE",
         headers:{"content-type":"application/json"},
@@ -56,7 +60,8 @@ const MyBookings = () => {
                <td>{pd?.description}</td>
                <td>{pd?.price}</td>
                <td>{pd?.status}</td>
-               <Button  onClick={()=>handeldelete(pd._id)} className="btn btn-warning">Delete</Button>
+              
+               <Button  onClick={()=>handeldelete(pd?._id)} className="btn btn-warning">Delete</Button>
              </tr>
          
        ))}

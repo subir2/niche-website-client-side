@@ -18,10 +18,12 @@ const Details = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-      console.log(data);
+      
     data.email = user?.email;
     data.status = "pending";
-    fetch("http://localhost:5000/addOrders", {
+   
+    console.log(data);
+    fetch("https://intense-ravine-08808.herokuapp.com/addOrders", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -39,7 +41,7 @@ const Details = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleService/${serviceId}`)
+    fetch(`https://intense-ravine-08808.herokuapp.com/singleService/${serviceId}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
@@ -59,8 +61,10 @@ const Details = () => {
                 <h4>{service.name}</h4>
                 <p>{service.description}</p>
                 <p>Rate:{service.price} <em>৳</em></p>
+
+                {delete service._id}
                
-                  <button  onClick={()=>onSubmit(service) }className="btn btn-success">Order Now</button>
+                  <button  onClick={()=>onSubmit(service)}className="btn btn-success">Order Now</button>
                 
               </div>
             </div>

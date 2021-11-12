@@ -6,14 +6,14 @@ const ManageAllproduct = () => {
   const [services, setServices] = useState([]);
   const[isdeleted,setIsdeleted]=useState(false);
   useEffect(() => {
-    fetch("http://localhost:5000/allServices")
+    fetch("https://intense-ravine-08808.herokuapp.com/allServices")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, [isdeleted]);
 
   const handeldelete=(data)=>{
     alert("Do You Want To delete?")
-    fetch(`http://localhost:5000/deleteproductManager/${data}`,{
+    fetch(`https://intense-ravine-08808.herokuapp.com/deleteproductManager/${data}`,{
         method:"DELETE",
         headers:{"content-type":"application/json"},
     })

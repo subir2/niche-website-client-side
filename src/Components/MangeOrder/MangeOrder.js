@@ -14,7 +14,7 @@ const MangeOrder = () => {
 
 //   console.log(status);
   useEffect(() => {
-    fetch("http://localhost:5000/allOrders")
+    fetch("https://intense-ravine-08808.herokuapp.com/allOrders")
       .then((res) => res.json())
       .then((data) => setOrders(data)
       
@@ -31,7 +31,7 @@ const MangeOrder = () => {
 
   const handleOrderId1 = (data,id) => {
     console.log(data);
-    fetch(`http://localhost:5000/statusUpdate/${id}`, {
+    fetch(`https://intense-ravine-08808.herokuapp.com/statusUpdate/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -54,7 +54,7 @@ const MangeOrder = () => {
   
   const handeldelete=(data)=>{
     alert("Do You Want To delete?")
-    fetch(`http://localhost:5000/deleteorderManager/${data}`,{
+    fetch(`https://intense-ravine-08808.herokuapp.com/deleteorderManager/${data}`,{
         method:"DELETE",
         headers:{"content-type":"application/json"},
     })

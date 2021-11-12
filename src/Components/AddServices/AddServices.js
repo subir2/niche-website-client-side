@@ -23,7 +23,7 @@ const AddServices = () => {
   const onSubmit = (data) => {
     
    
-    fetch("http://localhost:5000/addServices", {
+    fetch("https://intense-ravine-08808.herokuapp.com/addServices", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
