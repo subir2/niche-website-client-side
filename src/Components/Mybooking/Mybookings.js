@@ -20,7 +20,7 @@ const MyBookings = () => {
   const handeldelete=(data)=>{
     alert("Do You Want To delete?")
     console.log(data);
-    fetch(`http://localhost:5000/deleteorder/${data}`,{
+    fetch(`https://intense-ravine-08808.herokuapp.com/deleteorder/${data}`,{
         method:"DELETE",
         headers:{"content-type":"application/json"},
     })

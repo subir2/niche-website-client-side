@@ -40,7 +40,10 @@ const Dashbaord = () => {
         <div className="row">
           <div className="col-md-3 ">
             <div className="dashboard">
-              <h5>Dashboard</h5>
+            <h5>Dashboard</h5>
+            {<Link to="/home">
+            <li  className="dashboard-menu mt-5"><i className="fa fa-fw fa-home"></i> Go To The Home Page</li></Link>}
+              
 
          
 
@@ -94,6 +97,11 @@ const Dashbaord = () => {
           </div>
           <div className="col-md-9">
             <Switch>
+
+            <Route exact path="/home">
+            <Home></Home>
+            </Route>
+
               <PrivateRoute exact path={path}>
                 <MyBookings></MyBookings>
               </PrivateRoute>

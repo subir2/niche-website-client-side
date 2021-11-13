@@ -19,6 +19,7 @@ const Banner = () => {
       <div
         style={{
           background: `url('https://c4.wallpaperflare.com/wallpaper/928/479/800/baby-wallpaper-preview.jpg')`,
+          
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",
           backgroundSize: "cover",
@@ -31,7 +32,7 @@ const Banner = () => {
           >
             <div className="text-center my-5 py-5">
               <Bounce left cascade>
-                <h1 className="text-white">Your Baby Our Food!</h1>
+                <h1 className="text-white">Your child deserves nothing but the best!</h1>
               </Bounce>
 
               <Bounce right cascade>

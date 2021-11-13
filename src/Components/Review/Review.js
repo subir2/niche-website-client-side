@@ -11,7 +11,7 @@ const Review = () => {
   const { user } = useAuth();
   const onSubmit = (data) => {
    
-    fetch("http://localhost:5000/addSReview", {
+    fetch("https://intense-ravine-08808.herokuapp.com/addSReview", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -62,7 +62,7 @@ const Review = () => {
           className="submit-btn btn btn-danger mt-3"
           type="submit"
          
-          value="Register"
+          value="Review"
         />
 
 
