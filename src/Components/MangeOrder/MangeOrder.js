@@ -90,7 +90,7 @@ const MangeOrder = () => {
                 <p>Rate:{pd.price} <em>৳</em></p>
                 <p>Order by:{pd.email}</p>
                
-                  <button onClick={() => handleOrderId1(orders,pd?._id)} className="btn btn-success">Approved</button>
+                  <button onClick={() => handleOrderId1(orders,pd?._id)} className="btn btn-success">Shipped</button>
                   <button onClick={()=>handeldelete(pd._id)} className="btn bg-danger p-2 m-2">Delete</button>
                 
               </div>

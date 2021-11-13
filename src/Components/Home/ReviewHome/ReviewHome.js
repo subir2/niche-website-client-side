@@ -13,7 +13,7 @@ const ReviewHome = () => {
 
   const [show,setShow]=useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/showReview")
+    fetch("https://intense-ravine-08808.herokuapp.com/showReview")
       .then((res) => res.json())
       .then((data) => setShow(data));
   }, []);
