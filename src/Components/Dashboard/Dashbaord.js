@@ -53,7 +53,7 @@ const Dashbaord = () => {
               </Link>)}
 
 
-{!isAdmi && ( <Link to={`${url}/review`}>
+{!isAdmi && ( <Link to={`${url}/review`} style={{ textDecoration: 'none' }}>
                 <li className="dashboard-menu mt-5">Review</li>
               </Link>)}
 
@@ -68,7 +68,7 @@ const Dashbaord = () => {
                 )}
 
                  {isAdmi && (
-                 <Link to={`${url}/productList`}>
+                 <Link to={`${url}/productList`} style={{ textDecoration: 'none' }}>
               <li className="dashboard-menu mt-5">Manage All Product</li>
             </Link>
                 )}
@@ -81,8 +81,9 @@ const Dashbaord = () => {
                 </Link>)}
 
                 {isAdmi &&(
-                <Link to={`${url}/manageServices`}>
-                  <li className="dashboard-menu">Manage Service</li>
+                <Link to={`${url}/manageServices`} style={{ textDecoration: 'none' }}>
+                  <li className="dashboard-menu">Manage All Orders</li>
+                
                 </Link>)}
 
 {user?.email ?
